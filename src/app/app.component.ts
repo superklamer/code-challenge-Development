@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
  /**
   * Sort array of doctor objects based on review count in ascending or descending order
   * @param doctors - array to sort
-  * @param {string} [order]- order in which to sort 'asc' or 'desc'
+  * @param {string} [order] - order in which to sort 'asc' or 'desc'
   */
   sortDoctorArrayOnReviewCount(doctors, order) {
 
@@ -55,7 +55,7 @@ export class AppComponent implements OnInit {
   /**
    * Filter Doctor Array on a specific property
    * @param doctors - array to sort
-   * @param filter - 
+   * @param practiceToFilter - practice to filter by 
    */
   filterDoctorArraybyPractice(doctors, practiceToFilter) {
     // If no filter is provided, return unfiltered array
