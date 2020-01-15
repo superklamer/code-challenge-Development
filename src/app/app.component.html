@@ -10,17 +10,15 @@
       <h2>Family Practice Doctors</h2>
       <div class="doc-list-container">
         <ng-template ngFor let-doctor [ngForOf]="familyPracticeDoctors"> 
-          <div class="doc-card p-1">
+          <div class="doc-card p-1" *ngIf="doctor.name.length > 0"> <!-- do not show users with empty name properties -->
             <div class="card">
                 <div class="card-body">
-                    <div *ngIf="doctor.name.length > 0">  <!-- Only display doctors who's name property length is longer than 0 -->
                       <img class="card-img-top" src="https://avatars.dicebear.com/v2/{{doctor.gender}}/{{doctor.name || 'noname'}}.svg" alt="Dr. {{doctor.name}} - {{doctor.specialty}} image">
                       <div>
                         <h5 class="card-title">Dr. {{doctor.name}}</h5>
                         <h6 class="card-subtitle mb-2">{{doctor.specialty}}</h6>
                         <a href="#" class="card-link">Reviews <span class="badge badge-primary">{{doctor.reviewCount}}</span></a>
                       </div>
-                    </div>
                   </div>
                   </div>
               </div>
@@ -32,10 +30,10 @@
       <h2>Pediatrics Doctors</h2>
       <div class="doc-list-container">
         <ng-template ngFor let-doctor [ngForOf]="pediatricDoctors">
-          <div class="doc-card p-1">
+          <div class="doc-card p-1" *ngIf="doctor.name.length > 0"> <!-- do not show users with empty name properties -->
               <div class="card">
                   <div class="card-body">
-                      <div *ngIf="doctor.name.length > 0">  <!-- Only display doctors who's name property length is longer than 0 -->
+                      
                         <img class="card-img-top" src="https://avatars.dicebear.com/v2/{{doctor.gender}}/{{doctor.name || 'noname'}}.svg" alt="Dr. {{doctor.name}} - {{doctor.specialty}} image">
                         <div>
                           <h5 class="card-title">Dr. {{doctor.name}}</h5>
@@ -45,7 +43,6 @@
                     </div>
                   </div>
                 </div>
-          </div>
         </ng-template>
       </div>
   </div>

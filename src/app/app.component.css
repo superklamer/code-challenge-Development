@@ -12,13 +12,13 @@ h1 {
 }
 
 
-@media (min-width: 576px) and (max-width: 990px) { 
+@media (min-width: 576px) and (max-width: 991px) { 
 	.doc-card {
 		flex: 0 0 50%;
 	}
  }
 
- @media (min-width: 991px) {
+ @media (min-width: 992px) {
 	 .doc-card {
 		 flex: 0 0 33%;
 	 }
