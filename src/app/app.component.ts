@@ -32,7 +32,7 @@ export class AppComponent implements OnInit {
   * @param doctors - array to sort
   * @param {string} [order]- order in which to sort 'asc' or 'desc'
   */
-  sortDoctorArrayOnReviewCoun(doctors, order) {
+  sortDoctorArrayOnReviewCount(doctors, order) {
 
     // If the proper value for odering is not provided return unsorted list
     const allowedValues = ['desc', 'asc']
@@ -66,15 +66,14 @@ export class AppComponent implements OnInit {
 
 
   processDoctorArray(doctors, practiceType): Doctor[] {
-    //console.log(doctors);
+    console.log(doctors);
 
     var docs = doctors
     if (practiceType !== '') {
       docs = this.filterDoctorArraybyPractice(docs, practiceType)
     } 
     
-    console.log(docs)
-    this.sortDoctorArrayOnReviewCoun(docs, 'desc');
+    this.sortDoctorArrayOnReviewCount(docs, 'desc');
 
     return docs;
   }

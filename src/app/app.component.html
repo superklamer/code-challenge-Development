@@ -1,5 +1,5 @@
 <div class="container">
-    <h1>Sharp Coding Challenge</h1>
+    <h1>{{title}}</h1>
     <p class="lead">
       Please refer to the README.md file for instructions.
     </p>
@@ -14,7 +14,7 @@
               <div class="card">
                   <div class="card-body">
                       <div *ngIf="doctor.name.length > 0">  <!-- Only display doctors who's name property length is longer than 0 -->
-                        <img class="card-img-top" src="https://avatars.dicebear.com/v2/{{doctor.gender}}/{{doctor.name || 'noname'}}.svg" alt="Dr. {{doctor.name}} - {{doctor.specialty}}">
+                        <img class="card-img-top" src="https://avatars.dicebear.com/v2/{{doctor.gender}}/{{doctor.name || 'noname'}}.svg" alt="Dr. {{doctor.name}} - {{doctor.specialty}} picture">
                         <div>
                           <h5 class="card-title">Dr. {{doctor.name}}</h5>
                           <h6 class="card-subtitle mb-2">{{doctor.specialty}}</h6>
@@ -36,7 +36,7 @@
               <div class="card">
                   <div class="card-body">
                       <div *ngIf="doctor.name.length > 0">  <!-- Only display doctors who's name property length is longer than 0 -->
-                        <img class="card-img-top" src="https://avatars.dicebear.com/v2/{{doctor.gender}}/{{doctor.name || 'noname'}}.svg" alt="Dr. {{doctor.name}} - {{doctor.specialty}}">
+                        <img class="card-img-top" src="https://avatars.dicebear.com/v2/{{doctor.gender}}/{{doctor.name || 'noname'}}.svg" alt="Dr. {{doctor.name}} - {{doctor.specialty}} picture">
                         <div>
                           <h5 class="card-title">Dr. {{doctor.name}}</h5>
                           <h6 class="card-subtitle mb-2">{{doctor.specialty}}</h6>
