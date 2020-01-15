@@ -14,16 +14,16 @@
               <div class="card">
                   <div class="card-body">
                       <div *ngIf="doctor.name.length > 0">  <!-- Only display doctors who's name property length is longer than 0 -->
-                        <img class="card-img-top" src="https://avatars.dicebear.com/v2/{{doctor.gender}}/{{doctor.name || 'noname'}}.svg" alt="Dr. {{doctor.name}} - {{doctor.specialty}} picture">
+                        <img class="card-img-top" src="https://avatars.dicebear.com/v2/{{doctor.gender}}/{{doctor.name || 'noname'}}.svg" alt="Dr. {{doctor.name}} - {{doctor.specialty}} image">
                         <div>
                           <h5 class="card-title">Dr. {{doctor.name}}</h5>
                           <h6 class="card-subtitle mb-2">{{doctor.specialty}}</h6>
                           <a href="#" class="card-link">Reviews <span class="badge badge-primary">{{doctor.reviewCount}}</span></a>
                         </div>
+                      </div>
                     </div>
-                  </div>
-              </div>
-          </div>
+                   </div>
+               </div>
         </ng-template>
       </div>
        
@@ -36,7 +36,7 @@
               <div class="card">
                   <div class="card-body">
                       <div *ngIf="doctor.name.length > 0">  <!-- Only display doctors who's name property length is longer than 0 -->
-                        <img class="card-img-top" src="https://avatars.dicebear.com/v2/{{doctor.gender}}/{{doctor.name || 'noname'}}.svg" alt="Dr. {{doctor.name}} - {{doctor.specialty}} picture">
+                        <img class="card-img-top" src="https://avatars.dicebear.com/v2/{{doctor.gender}}/{{doctor.name || 'noname'}}.svg" alt="Dr. {{doctor.name}} - {{doctor.specialty}} image">
                         <div>
                           <h5 class="card-title">Dr. {{doctor.name}}</h5>
                           <h6 class="card-subtitle mb-2">{{doctor.specialty}}</h6>
