@@ -75,6 +75,7 @@ export class AppComponent implements OnInit {
     
     this.sortDoctorArrayOnReviewCount(docs, 'desc');
 
+    console.log(docs);
     return docs;
   }
 }
