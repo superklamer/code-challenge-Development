@@ -68,14 +68,12 @@ export class AppComponent implements OnInit {
   processDoctorArray(doctors, practiceType): Doctor[] {
     console.log(doctors);
 
-    var docs = doctors
     if (practiceType !== '') {
-      docs = this.filterDoctorArraybyPractice(docs, practiceType)
+      doctors = this.filterDoctorArraybyPractice(doctors, practiceType)
     } 
     
-    this.sortDoctorArrayOnReviewCount(docs, 'desc');
+    this.sortDoctorArrayOnReviewCount(doctors, 'desc');
 
-    console.log(docs);
-    return docs;
+    return doctors;
   }
 }
