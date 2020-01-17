@@ -38,18 +38,23 @@ export class AppComponent implements OnInit {
     const allowedValues = ['desc', 'asc']
     if (!allowedValues.includes(order.toLocaleLowerCase())) { return doctors; }
 
-    if (order.toLocaleLowerCase() === 'desc') {
-      doctors.sort((a, b) => {
-        if (a.reviewCount < b.reviewCount) { return 1; }
-        else {return -1; }
-      })
-    } 
-    else if (order.toLocaleLowerCase() === 'asc') {
-      doctors.sort((a, b) => {
-        if (a.reviewCount > b.reviewCount) { return 1; }
-        else {return -1 ;}
-      })
-    }
+    const index = order.toLocaleLowerCase() === 'desc' ? 1 : -1
+    doctors.sort((curr,next) => {
+      if (curr.reviewCount < next.reviewCount) {return index} else {return -index}
+    })
+
+    // if (order.toLocaleLowerCase() === 'desc') {
+    //   doctors.sort((a, b) => {
+    //     if (a.reviewCount < b.reviewCount) { return -1; }
+    //     else {return 1; }
+    //   })
+    // } 
+    // else if (order.toLocaleLowerCase() === 'asc') {
+    //   doctors.sort((a, b) => {
+    //     if (a.reviewCount > b.reviewCount) { return 1; }
+    //     else {return -1 ;}
+    //   })
+    // }
   }
 
   /**
